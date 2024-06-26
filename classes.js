@@ -1,3 +1,5 @@
+// This to be explained by Maurice
+
 // Student class that has three properties and two methods
 class Student {
   constructor(fName, lName, age) {

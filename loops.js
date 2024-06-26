@@ -1,3 +1,5 @@
+// Val to cover the difference between the while loop and the do...while loop
+
 let numArr = [23, 569];
 
 // In the while loop, the code inside the curly brackets will only ever run if the condition is true

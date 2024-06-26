@@ -1,3 +1,5 @@
+// Val to explain to us what it means to refer to string methods
+
 // Creating a string normally (using backticks in this case... You can use double or single quotation marks as well)
 let s = `A certain string`;
 
