@@ -1,6 +1,7 @@
 // SCOPE
 // let and const: are block scoped
 // var: function (and not block) scoped
+// var: when used inside a block, its scope is assigned to the next available function or global scope
 
 // GLOBAL SCOPE
 // Any variable that is declared in the GLOBAL SCOPE is accessible everywhere in the file (inside conditional statements, loops and functions)
