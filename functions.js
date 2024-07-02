@@ -24,6 +24,10 @@
 
 // // Function that adds two numbers:
 function addTwoNumbers(a, b) {
+  if (typeof a !== "number" || typeof b !== "number") {
+    return "Error: you need to pass numbers";
+  }
+
   return a + b;
 }
 
@@ -35,7 +39,13 @@ let summation = addTwoNumbers(varA, varB);
 console.log(summation); // 6
 
 const addTwoNumbersArrow = (a, b) => {
-  return parseInt(a + b);
+  if (typeof a !== "number" || typeof b !== "number") {
+    return "Error: you need to pass numbers";
+  }
+
+  return a + b;
 };
+
+console.log(addTwoNumbersArrow(varA, varB)); // 6
 
 const addTwoNumbersArrow2 = (a, b) => a + b;
