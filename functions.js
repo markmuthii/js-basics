@@ -23,29 +23,56 @@
 // console.log("Nums4: ", nums4);
 
 // // Function that adds two numbers:
-function addTwoNumbers(a, b) {
-  if (typeof a !== "number" || typeof b !== "number") {
-    return "Error: you need to pass numbers";
+// function addTwoNumbers(a, b) {
+//   return a + b;
+// }
+
+// // let varA = 2;
+// // let varB = 4;
+
+// console.log(addTwoNumbers(2, 4));
+
+// console.log(addTwoNumbers(1, 2));
+// console.log(addTwoNumbers(45, 23));
+
+// console.log(summation); // 6
+
+// const addTwoNumbersArrow = (a, b) => {
+//   if (typeof a !== "number" || typeof b !== "number") {
+//     return "Error: you need to pass numbers";
+//   }
+
+//   return a + b;
+// };
+
+// console.log(addTwoNumbersArrow(varA, varB)); // 6
+
+// const addTwoNumbersArrow2 = (a, b) => a + b;
+
+// Write a function that returns all the leap years
+function leapYears(first, last) {
+  let arr = [];
+  // Do while
+  // for loop
+  for (let year = first; year <= last; year++) {
+    if (year % 4 === 0) {
+      arr.push(year);
+      year += 3;
+    }
   }
 
-  return a + b;
+  return arr;
 }
 
-let varA = 2;
-let varB = 4;
+let firstYear = 1900;
+let lastYear = 1999;
+// ... in the 20th century
+let l20 = leapYears(firstYear, lastYear);
+console.log("20th Century: ", l20);
 
-let summation = addTwoNumbers(varA, varB);
+// firstYear = 2000;
+// lastYear = 2099;
+// let l21 = leapYears(firstYear, lastYear);
+// console.log("21st Century: ", l21);
 
-console.log(summation); // 6
-
-const addTwoNumbersArrow = (a, b) => {
-  if (typeof a !== "number" || typeof b !== "number") {
-    return "Error: you need to pass numbers";
-  }
-
-  return a + b;
-};
-
-console.log(addTwoNumbersArrow(varA, varB)); // 6
-
-const addTwoNumbersArrow2 = (a, b) => a + b;
+// Given the age of a person (80) who was born on February 29th, find out how many times the person has celebrated their birthday on the date that they were born.
