@@ -50,25 +50,25 @@
 // const addTwoNumbersArrow2 = (a, b) => a + b;
 
 // Write a function that returns all the leap years
-function leapYears(first, last) {
-  let arr = [];
-  // Do while
-  // for loop
-  for (let year = first; year <= last; year++) {
-    if (year % 4 === 0) {
-      arr.push(year);
-      year += 3;
-    }
-  }
+// function leapYears(first, last) {
+//   let arr = [];
+//   // Do while
+//   // for loop
+//   for (let year = first; year <= last; year++) {
+//     if (year % 4 === 0) {
+//       arr.push(year);
+//       year += 3;
+//     }
+//   }
 
-  return arr;
-}
+//   return arr;
+// }
 
-let firstYear = 1900;
-let lastYear = 1999;
-// ... in the 20th century
-let l20 = leapYears(firstYear, lastYear);
-console.log("20th Century: ", l20);
+// let firstYear = 1900;
+// let lastYear = 1999;
+// // ... in the 20th century
+// let l20 = leapYears(firstYear, lastYear);
+// console.log("20th Century: ", l20);
 
 // firstYear = 2000;
 // lastYear = 2099;
