@@ -9,51 +9,56 @@
 
 // // LOCAL SCOPE
 // // - Function Scope
-function scopeFunction() {
-  let varInsideFunction = 77;
-  console.log("varInsideFunction", varInsideFunction);
-  console.log("VarInGlobalScope:", varInGlobalScope);
-}
+// function scopeFunction() {
+//   let varInsideFunction = 77;
+//   console.log("varInsideFunction", varInsideFunction);
+//   console.log("VarInGlobalScope:", varInGlobalScope);
+// }
 
-scopeFunction();
+// console.log(varInsideFunction); // cannot be accessed outside the scopeFunction function.
 
-// varInsideFunction is not accessible in a different function. It is only accessible in the function where it was declared
-function secondFunction() {
-  console.log("varInsideFunction", varInsideFunction); // This will throw a referenceError when the function is called
-}
+// scopeFunction();
+
+// // varInsideFunction is not accessible in a different function. It is only accessible in the function where it was declared
+// function secondFunction() {
+//   console.log("varInsideFunction", varInsideFunction); // This will throw a referenceError when the function is called
+// }
 // secondFunction();
 
-// - Block Scope
+// // - Block Scope
 
-if (true) {
-  console.log("VarInGlobalScope inside the IF block:", varInGlobalScope);
-  let varInsideIf = "This should be printed on the console";
-  console.log("varInsideIf: ", varInsideIf);
-}
+// if (true) {
+//   var varInsideBlockWithVar = "Hello there";
+//   console.log("VarInGlobalScope inside the IF block:", varInGlobalScope);
+//   let varInsideIf = "This should be printed on the console";
+//   console.log("varInsideIf (33): ", varInsideIf);
+// }
 
-console.log("VarInGlobalScope outside the IF block:", varInGlobalScope);
-console.log(varInsideIf); // This throws and error because the varInsideIf is accessed outside its scope (block)
+// console.log(varInsideBlockWithVar); // this will not throw an error because the variable was declared with var
 
-// Function and Block Scope
-function functionAndBlockScope() {
-  // using var, the variable gets scoped to the function and is accessible from anywhere inside the function
-  var fbsVarOne = "This is function scoped";
+// // console.log("VarInGlobalScope outside the IF block:", varInGlobalScope);
+// console.log(varInsideIf); // This throws and error because the varInsideIf is accessed outside its scope (block)
 
-  if (true) {
-    // Using var, despite being inside a block, the variable is also scoped to the function, and not the block, and is hence accessible outside this if block
-    var fbsVarTwo = "This is function scoped, but defined inside a block";
+// // Function and Block Scope
+// function functionAndBlockScope() {
+//   // using var, the variable gets scoped to the function and is accessible from anywhere inside the function
+//   var fbsVarOne = "This is function scoped";
 
-    // Using let scopes this variable only to this if block, and that makes access to the variable only possible from within this if block
-    let fbsVarThree = "This is block scoped";
+//   if (true) {
+//     // Using var, despite being inside a block, the variable is also scoped to the function, and not the block, and is hence accessible outside this if block
+//     var fbsVarTwo = "This is function scoped, but defined inside a block";
 
-    console.log("fbsVarOne called from inside block: ", fbsVarOne);
-    console.log("fbsVarThree called inside block: ", fbsVarThree);
-  }
+//     // Using let scopes this variable only to this if block, and that makes access to the variable only possible from within this if block
+//     let fbsVarThree = "This is block scoped";
 
-  console.log("fbsVarTwo from outside the if block: ", fbsVarTwo);
-  // console.log("fbsVarThree: ", fbsVarThree);
-}
+//     console.log("fbsVarOne called from inside block: ", fbsVarOne);
+//     console.log("fbsVarThree called inside block: ", fbsVarThree);
+//   }
+
+//   console.log("fbsVarTwo from outside the if block: ", fbsVarTwo);
+//   console.log("fbsVarThree: ", fbsVarThree); // this will throw an error because fbsVarThree has been declared inside the block with let keyword
+// }
 
 // console.log("fbsVarTwo: ", fbsVarTwo); // fbsVarTwo is not accessible outside the function where it has been defined
 
-functionAndBlockScope();
+// functionAndBlockScope();
