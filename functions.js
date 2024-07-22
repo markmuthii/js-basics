@@ -76,3 +76,47 @@
 // console.log("21st Century: ", l21);
 
 // Given the age of a person (80) who was born on February 29th, find out how many times the person has celebrated their birthday on the date that they were born.
+
+// CALLBACK FUNCTIONS
+// function functionOne(paramOne) {
+//   paramOne();
+// }
+
+// function functionTwo() {
+//   console.log("Hello");
+// }
+
+// functionOne(functionTwo);
+
+// const arr = [0, 1, 2];
+
+// function mapCallback(value, index, arr) {
+//   console.log(index);
+//   return value + 1;
+// }
+
+// const arr2 = arr.map(mapCallback);
+
+// console.log(arr2);
+
+// const param = "Jason Statham";
+// function one(two) {
+//   two("John Wick");
+// }
+
+// function t(param, param2) {
+//   console.log(`${param}`);
+// }
+
+// one(t);
+
+// let variable = "Hello";
+// function one() {
+//   let variable = "Hi";
+
+//   if (1 == 1) {
+//     console.log(variable);
+//   }
+// }
+
+// one();
